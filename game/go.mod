@@ -4,6 +4,7 @@ go 1.19
 
 require (
 	github.com/boltdb/bolt v1.3.1
+	github.com/delta-game/serva v0.0.0-20230305230309-464353efcd76
 	github.com/faiface/glhf v0.0.0-20181018222622-82a6317ac380
 	github.com/faiface/mainthread v0.0.0-20171120011319-8b78f0a41ae3
 	github.com/go-gl/gl v0.0.0-20190320180904-bf2b1f2f34d7
@@ -11,7 +12,6 @@ require (
 	github.com/go-gl/mathgl v0.0.0-20190713194549-592312d8590a
 	github.com/hashicorp/golang-lru v0.5.4
 	github.com/ojrac/opensimplex-go v1.0.1
-	github.com/delta-game/serva v0.0.0-20230213012321-eaf3ae8c487a
 )
 
 require (
