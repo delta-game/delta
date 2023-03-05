@@ -1,0 +1,9 @@
+While the source of DELTΔ is itself, under the MIT License; 
+It depends on various projects (ie: libraries, assets, etc) 
+in the assorted cadre that is opensource licensing. Though 
+I've taken care to assure they're compatible -- since they'll 
+be distributed together in this repo and/or a related release, 
+they will be formally listed here:
+
+The Monocraft Font, which is under the OFL-1.1 license.
+https://github.com/IdreesInc/Monocraft 
