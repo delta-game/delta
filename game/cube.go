@@ -1,12 +1,14 @@
 package main
 
 const (
-	sleft = iota
-	sright
-	sup
-	sdown
-	sfront
-	sback
+	// Constants used to index the 'show' array, which specifies which sides of a cube should be rendered.
+	// A cube has 6 sides, and we're starting to index it from 0. So we have 0-5 sides.
+	sleft = iota  	// 0
+	sright		// 1
+	sup		// 2
+	sdown		// 3
+	sfront		// 4
+	sback		// 5
 )
 
 // show: left, right, up, down, front, back,

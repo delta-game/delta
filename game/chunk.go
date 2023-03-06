@@ -9,9 +9,10 @@ import (
 )
 
 const (
-	ChunkWidth = 32
+	ChunkWidth = 32 // Width of the chunk in blocks.
 )
 
+// Vec3 represents a 3-dimensional vector.
 type Vec3 struct {
 	X, Y, Z int
 }
@@ -42,6 +43,7 @@ func (v Vec3) Chunkid() Vec3 {
 	}
 }
 
+// NearBlock returns the vector as an integer that is nearest to the given floating-point position.
 func NearBlock(pos mgl32.Vec3) Vec3 {
 	return Vec3{
 		int(round(pos.X())),
@@ -50,11 +52,13 @@ func NearBlock(pos mgl32.Vec3) Vec3 {
 	}
 }
 
+// Chunk represents a single chunk of blocks in the game world.
 type Chunk struct {
-	id     Vec3
-	blocks sync.Map // map[Vec3]int
+	id     Vec3	  // ID of the given chunk.
+	blocks sync.Map   // TODO
 }
 
+// NewChunk creates and returns a new Chunk with the given ID.
 func NewChunk(id Vec3) *Chunk {
 	c := &Chunk{
 		id: id,
@@ -62,6 +66,7 @@ func NewChunk(id Vec3) *Chunk {
 	return c
 }
 
+// Returns the ID of the chunk.
 func (c *Chunk) Id() Vec3 {
 	return c.id
 }
