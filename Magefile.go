@@ -213,7 +213,7 @@ func Depends() error {
 			// Update the package list for Debian and Ubuntu
 			if strings.Contains(distStr, "Debian") || strings.Contains(distStr, "Ubuntu") {
 				fmt.Printf("\n\nWe're Going To Install Some Dependencies For Ya.\n")
-				if err := exec.Command("sudo", "apt", "install","golang", "xorg-dev", "libgl1-mesa-dev", "libopenal1", "libopenal-dev", "libvorbis0a", "libvorbis-dev", "libvorbisfile3").Run(); err != nil {
+				if err := exec.Command("sudo", "apt", "install", "-y", "golang", "xorg-dev", "libgl1-mesa-dev", "libopenal1", "libopenal-dev", "libvorbis0a", "libvorbis-dev", "libvorbisfile3").Run(); err != nil {
 					return err
 				}
 				fmt.Println("\nDependencies Installed Successfully!")
