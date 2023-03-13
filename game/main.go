@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"path/filepath"
 	"time"
 
 	_ "image/png"
@@ -334,6 +335,20 @@ func run() {
 	if client != nil {
 		defer client.Close()
 	}
+
+      themePath, err := filepath.Abs("res/muz/the-change.mp3")
+        if err != nil {
+              log.Fatal(err)
+        }
+
+        // Play background music in a separate goroutine
+        go func() {
+              err := PlayBackgroundMusic(themePath)
+              if err != nil {
+                      log.Fatal(err)
+              }
+        }()
+
 
 	game, err = NewGame(800, 600)
 	if err != nil {
